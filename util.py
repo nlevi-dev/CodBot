@@ -1,3 +1,17 @@
+import os
+import datetime
+from PIL import ImageGrab
+
+screenshot_dir = os.path.join(os.getcwd(), "screenshots")
+os.makedirs(screenshot_dir, exist_ok=True)
+
+def take_screenshot():
+    screenshot = ImageGrab.grab()
+    timestamp = datetime.datetime.now().strftime("%Y%m%d_%H%M%S")
+    filename = os.path.join(screenshot_dir, f"screenshot_{timestamp}.png")
+    screenshot.save(filename)
+    print(f"Screenshot saved as {filename}")
+
 tolerance = 10
 
 def test_profile(profile, image):
@@ -21,3 +35,4 @@ def test_profile(profile, image):
     if matched_negative_cnt == total_negative_cnt and total_negative_cnt > 0:
         return False
     return True
+

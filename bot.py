@@ -2,7 +2,7 @@ import keyboard
 from PIL import ImageGrab
 import time
 import numpy as np
-from util import test_profile
+from util import test_profile, take_screenshot
 import pydirectinput
 import random
 
@@ -28,6 +28,7 @@ def toggle():
         print('Stopped!')
 
 keyboard.add_hotkey('ctrl+t', toggle)
+keyboard.add_hotkey('ctrl+l', take_screenshot)
 
 previous = ''
 state = ''
