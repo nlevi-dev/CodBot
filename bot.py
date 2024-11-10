@@ -1,10 +1,10 @@
-import keyboard
-from PIL import ImageGrab
 import time
-import numpy as np
-from util import test_profile, take_screenshot
-import pydirectinput
 import random
+import keyboard
+import numpy as np
+from PIL import ImageGrab
+import pydirectinput
+from util import test_profile, take_screenshot
 
 global running
 running = True

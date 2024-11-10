@@ -5,7 +5,7 @@ import cv2
 from util import test_profile
 
 if len(sys.argv) < 2:
-    print("Usage: python script.py <profile_name>")
+    print("Usage: python test_profile.py <profile_name>")
     sys.exit(1)
 
 profile_name = sys.argv[1]
