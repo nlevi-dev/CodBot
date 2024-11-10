@@ -9,7 +9,7 @@ import random
 global running
 running = True
 
-state_names = ['ingame','endgame','confirm','pregame','connection','none']
+state_names = ['ingame','endgame','pregame','connection','none']
 profiles = [np.load('profiles/'+name+'.npy') for name in state_names[:-1]]
 
 def get_state():
@@ -59,7 +59,7 @@ while True:
         elif state == 'endgame':
             pydirectinput.moveTo(1488, 917)
             pydirectinput.click()
-        elif state == 'confirm':
+            time.sleep(1)
             pydirectinput.moveTo(646, 603)
             pydirectinput.click()
         elif state == 'connection':
@@ -68,10 +68,10 @@ while True:
         elif state == 'pregame' and (time.time()-stamp) > 180:
             pydirectinput.moveTo(140, 1035)
             pydirectinput.click()
-            time.sleep(0.1)
+            time.sleep(1)
             pydirectinput.moveTo(1430, 417)
             pydirectinput.click()
-            time.sleep(0.1)
+            time.sleep(1)
             pydirectinput.moveTo(707, 600)
             pydirectinput.click()
             time.sleep(10)
